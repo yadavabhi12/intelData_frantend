@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Add_Profile.css';
+import { ListContext } from '../Components/ContextAPI/ListContext';
 
 const Add_Profile = ({setProfile_Show}) => {
   const [propertyName, setPropertyName] = useState('');
    const [dataType, setDataType] = useState('');
+   const {url}=useContext(ListContext)
  
    const handleSave = async () => {
      if (!propertyName || !dataType) {
@@ -12,7 +14,7 @@ const Add_Profile = ({setProfile_Show}) => {
      }
  
      try {
-       const response = await fetch('http://localhost:5000/api/lists/field', {
+       const response = await fetch(`${url}lists/field`, {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',

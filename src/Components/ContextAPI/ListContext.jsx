@@ -39,7 +39,7 @@ export const ListProvider = ({ children }) => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/lists",
+       `${url}lists`,
         { name: newListName },
         {
           headers: {
