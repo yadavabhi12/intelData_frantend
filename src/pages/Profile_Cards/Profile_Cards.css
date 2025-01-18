@@ -1,0 +1,105 @@
+/* Profile Cards Container */
+.Profile_cards {
+    width: 100%;  
+    /* margin: 20px; */
+    display: flex;
+    justify-content: space-between;
+   /* justify-content: center; */
+   gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+    /* gap: px; Space between cards */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+}
+
+/* Single Card Styling */
+.Profile_card {
+    /* margin: 10px 0; */
+    width: max(38vw,47%);
+   height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Layout for card content */
+   
+    gap: 20px; /* Gap between card content */
+    padding: 20px; /* Padding inside the card */
+    background-color: #ffffff; /* Background color of the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.Profile_card:hover {
+    background-color: #f3f4f6; /* Change background on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Card Elements */
+/* Card Title Styling */
+.Card_title {
+    display: block;
+    justify-self: self-start;
+    font-size: 1rem; /* Font size for the title */
+    font-weight: bold; /* Bold title */
+    color: black; /* Text color */
+    margin-bottom: 5px; /* Space below title */
+    overflow-wrap: break-word; /* Allows breaking long words */
+    word-wrap: break-word; /* Ensures that long words will break and wrap */
+    white-space: normal; /* Allows the text to wrap normally */
+    max-width: 100%; /* Prevents overflow */
+}
+
+.Card_logo {
+    font-size: 1.5rem; /* Font size for the logo */
+    color: #57595b; /* Color for logo */
+    margin-bottom: 10px; /* Space below logo */
+}
+
+.Card_day {
+    font-size: 0.9rem; /* Font size for the day */
+    color: #555; /* Text color */
+    margin-bottom: 5px; /* Space below day */
+}
+
+.Card_total_number {
+    justify-self: start;
+    font-size: 1rem; /* Font size for total number */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 5px; /* Space below total number */
+}
+
+.Card_percentage, .Card_percentage_active {
+    font-size: 0.9rem; /* Font size for percentage */
+    color: #4CAF50; /* Green color for positive values */
+    margin-bottom: 5px; /* Space below percentage */
+}
+
+.Card_sent, .Card_delivered, .Card_failed {
+    
+    font-size: 0.8rem; /* Font size for status */
+    color: #777; /* Text color */
+    margin-bottom: 3px; /* Space below status */
+}
+.Card_sent{
+    justify-self: start;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    .Profile_card {
+        width: 45%; /* Slightly larger cards for medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .Profile_card {
+        width: 80%; /* Full width for cards on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .Profile_card {
+        width: 90%; /* Make cards even narrower for very small screens */
+    }
+}
+

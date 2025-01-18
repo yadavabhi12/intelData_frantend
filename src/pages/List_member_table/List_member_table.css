@@ -1,0 +1,132 @@
+/* General container styling */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .member-title-list{
+    font-size: max(3vw,1.1rem);
+    font-weight: bold;
+  }
+  /* Table styling */
+  .table {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color:black;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Hover effect on rows */
+  .table tbody tr:hover {
+    background-color: #dbeafe;
+    cursor: pointer;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .table th,
+    .table td {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Button styling */
+  button {
+    border: none;
+    padding: 8px 15px;
+    background:linear-gradient(135deg, #333535, #746c6c);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Pagination styling */
+  .pagination_main_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .pagination_card {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .pagination_card button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .pagination_card button.active {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+  }
+  
+  .pagination_card button:hover:not(.active) {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination_card button:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: #6c757d;
+  }
+  
+  .result_card {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .pagination_show select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .pagination_show label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+
+  /* go back button */
+  .members-btn{
+    margin-bottom: 12px;
+        color: rgb(238, 240, 243);
+  }
+ 

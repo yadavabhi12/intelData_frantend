@@ -1,0 +1,120 @@
+.Profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgb(20, 23, 25);
+  background: linear-gradient( rgb(238, 241, 243),rgb(248, 248, 250) ); 
+}
+
+.data-profile-cards {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+  
+}
+
+.profile-cards .title h2 {
+  font-size: max(3vw,1.1rem);
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.data-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content:space-between ;
+
+}
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  text-align: center;
+  background: rgb(245, 247, 247);
+  background: linear-gradient(20deg, #d9dff1, #ecf5ef, rgb(190, 239, 235));
+
+  /* border: 1px solid #ddd; */
+  box-shadow: 0px 2px 5px rgb(20, 23, 25);
+  border-radius: 8px;
+  padding: 20px;
+  width:max(22vw ,300px) ;
+ 
+  min-height: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.data-card:hover {
+  
+  transform: translateY(-5px);
+ 
+}
+
+.data-card-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family:  sans-serif;
+  width: 100%;
+  gap: 10px;
+}
+
+.data-card-icon h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.data-card-icon span {
+  color: #555555;
+}
+
+.data-card-mes {
+  margin-top: 10px;
+}
+
+.data-mes {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.All_User_Information {
+  background: linear-gradient( #e3e5eb, #fcfffd ,rgb(200, 243, 239));
+  margin-top: 20px;
+  padding: 20px;
+  /* background: #fff; */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 2px 5px rgb(20, 23, 25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-cards {
+    justify-content: space-around;
+  }
+
+  .data-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-card {
+    width: 100%;
+  }
+}

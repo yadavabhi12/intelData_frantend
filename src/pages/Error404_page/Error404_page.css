@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Error Page Container */
+.error-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to bottom, #7a939d, #32e7ad);
+    animation: day-night-cycle 30s infinite;
+    overflow: hidden;
+}
+
+/* Day-Night Cycle Animation */
+@keyframes day-night-cycle {
+    0% {
+        background: linear-gradient(to bottom, #eae85f, #7c8589); /* Day */
+    }
+    50% {
+        background: linear-gradient(to bottom, #9fb8e3, #f5f9c1); /* Evening */
+    }
+    100% {
+        background: linear-gradient(to bottom, #000428, #040b56); /* Night */
+    }
+}
+
+/* Sky */
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffdd00, #ffa500);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: sun-move 30s infinite;
+    z-index: 2;
+}
+
+@keyframes sun-move {
+    0%, 100% {
+        top: 30%;
+        opacity: 1;
+        width: 120px;
+        height: 120px;
+    }
+    25% {
+        top: 10%;
+        opacity: 0.9;
+        width: 200px;
+        height: 200px;
+    }
+    50% {
+        top: 0%;
+        opacity: 0.8;
+        width: 150px;
+        height: 150px;
+    }
+    75% {
+        top: 10%;
+        opacity: 1;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #f0f0f0, #c0c0c0);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: moon-move 30s infinite;
+    z-index: 1;
+    opacity: 0;
+}
+
+@keyframes moon-move {
+    0%, 100% {
+        top: 70%;
+        opacity: 0;
+    }
+    50% {
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+/* Clouds */
+.clouds {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    z-index: 2;
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: cloud-move 15s linear infinite, cloud-zigzag 10s ease-in-out infinite;
+}
+
+.cloud1 {
+    left: -150px;
+    animation-delay: 0s, 5s;
+}
+
+.cloud2 {
+    right: -250px;
+    animation-delay: 2s, 3s;
+}
+
+/* Smooth Zigzag Cloud Movement */
+@keyframes cloud-move {
+    0% {
+        left: -250px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes cloud-zigzag {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Stars */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2015/09/18/18/56/space-941029_960_720.jpg') repeat;
+    animation: star-blink 2s infinite;
+}
+
+@keyframes star-blink {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Falling Star */
+.falling-star {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 5px;
+    height: 10px;
+    background: #ff0;
+    animation: fall 1s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes fall {
+    0% {
+        top: 0;
+        left: 30%;
+        opacity: 0;
+    }
+    50% {
+        top: 50%;
+        left: 30%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        left: 30%;
+        opacity: 0;
+    }
+}
+
+/* Main Content */
+.center-content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+.error-title {
+    font-size: 6rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.error-description {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.go-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border: none;
+    border-radius: 50px;
+   
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.go-home:hover {
+    background: linear-gradient(0deg, rgb(122, 197, 198) 0%, rgb(42, 228, 153) 100%);
+    transform: scale(1.1);
+}

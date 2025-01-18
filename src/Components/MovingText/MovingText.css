@@ -1,0 +1,50 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap'); */
+.moving-text-container {
+    overflow: hidden; /* Ensures the text appears to go out of view */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    width: 80%; /* Full width for responsiveness */
+    background-color: white;
+    /* background-color: #dab8f0; */
+    box-shadow: 0px 2px 5px rgb(37, 39, 41) inset;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+   
+    
+  
+    height: 70%;
+    
+  }
+  
+  .moving-text {
+    display: inline-block;
+    font-size: 1.2rem;
+    /* color:rgb(19, 93, 254); */
+    color:  #0c93e8 ;
+    padding-left: 100%; /* Start position outside the view */
+    animation: moveText 20s linear infinite; /* Infinite loop with a custom easing */
+  }
+  
+  @keyframes moveText {
+    from {
+      transform: translateX(0); /* Start outside the container */
+    }
+    to {
+      transform: translateX(-100%); /* Move to the end */
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .moving-text {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .moving-text {
+      font-size: 0.8rem;
+    }
+  }
+  

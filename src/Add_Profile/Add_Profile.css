@@ -1,0 +1,139 @@
+/* General Container */
+.add_property_container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Card Styling */
+  .add_property_card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(135deg, #dce5f7, #d0f3e6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  .add_property_card p{
+    color:rgb(27, 26, 26);
+    font-size: max(1vw,16px);
+  }
+  .add_input_type{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Input and Select Field Containers */
+  .input-container {
+    position: relative;
+    flex: 1;
+  }
+  
+  .input-container input,
+  .input-container select {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .input-container input:focus,
+  .input-container select:focus {
+    border-color: #0d0e0d;
+  }
+  
+  /* Floating Label */
+  .input-container label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .input-container input:focus + label,
+  .input-container input:not(:placeholder-shown) + label,
+  .input-container select:focus + label,
+  .input-container select:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #6180e8;
+    background: linear-gradient(135deg, #dce5f7, #d0f3e6);
+    padding: 0 4px;
+  }
+  
+  /* Buttons */
+  .add_profile_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .add_profile_btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    color: white;
+  }
+  
+  /* Cancel Button */
+  .add_profile_btn .cancel {
+    background-color: #7e120b;
+  }
+  
+  .add_profile_btn .cancel:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Save Button */
+  .add_profile_btn .save {
+    background-color: #4caf50;
+  }
+  
+  .add_profile_btn .save:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 700px) {
+    .add_property_card {
+      padding: 16px;
+      gap: 12px;
+    }
+  
+    .add_input_type {
+      flex-direction: column;
+    }
+  
+    .add_profile_btn button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

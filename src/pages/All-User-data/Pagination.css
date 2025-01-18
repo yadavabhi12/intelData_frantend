@@ -1,0 +1,254 @@
+/* Table search cards */
+.table_main_container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.table-search-card {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.Add-profile-button {
+  padding: 10px 20px;
+  background-color: rgba(75, 85, 110, 0.5);
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.Add-profile-button:hover {
+  background-color: rgba(75, 85, 110, 0.7);
+}
+
+.table-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: width 0.4s ease;
+}
+
+.table-search input {
+  width: 0;
+  opacity: 0;
+  padding: 10px 40px 10px 15px;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0px 2px 3px #a3a5a6 inset;
+  border-radius: 50px;
+  outline: none;
+  transition: width 0.4s ease, opacity 0.4s ease, box-shadow 0.3s ease;
+}
+
+.table-search.expanded input {
+  width: 200px;
+  opacity: 1;
+  box-shadow: 0px 2px 3px #a3a5a6 inset;
+}
+
+.table-search button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4b556e;
+  cursor: pointer;
+}
+
+.table-search button:hover {
+  background: none;
+  color: #333;
+}
+
+/* Main container for pagination and results */
+.pagination_main_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* Responsive pagination card container */
+.pagination_card {
+  display: flex;
+  padding: 0px 8px;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.pagination_card button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 1px;
+  background: rgba(255, 255, 255, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Active and hover states for pagination buttons */
+.pagination_card button.active {
+  background-color: #8da5ee;
+  color: white;
+}
+
+.pagination_card button:hover {
+  background: rgba(105, 104, 104, 0.4);
+}
+
+/* Result card styling */
+.result_card {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Show more button styling */
+.pagination_show {
+  cursor: pointer;
+  font-family: sans-serif;
+  color: black;
+}
+
+.pagination_next {
+  display: inline-flex;
+  padding: 8px;
+  gap: 2px;
+  align-items: center;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: rgb(195, 230, 234, .2);
+  box-shadow: 0px 0px 2px rgba(34, 35, 35, 0.9);
+  color: #272525;
+}
+
+.pagination_next:hover {
+  background-color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pagination_main_card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination_card button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Glassmorphism table styling */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive table */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  color: #333;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.responsive-table tr > td {
+  border-bottom: 1px solid #c3b9b9;
+}
+
+.responsive-table th {
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, .8);
+}
+
+/* Table row hover effect */
+.responsive-table tbody tr:hover {
+  background-color: rgba(4, 252, 165, 0.2);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Show dropdown styling */
+.pagination_show {
+  display: flex;
+  align-items: center;
+}
+
+.pagination_show span {
+  margin-right: 10px;
+}
+
+.size {
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #c1eae8;
+  color: #333;
+  border: 1px solid rgba(75, 85, 110, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.size:hover {
+  border-color: #8da5ee;
+}
+
+
+/* select option  */
+.pagination_show {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination_select {
+  padding: 5px;
+  margin-left: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.pagination_select:hover {
+  border-color: #007bff;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}

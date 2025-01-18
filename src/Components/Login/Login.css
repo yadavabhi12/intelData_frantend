@@ -1,0 +1,131 @@
+
+body {
+    background-color:white; /* Light background color */
+    font-family: Arial, sans-serif;
+
+}
+.login-main-body{
+    background: linear-gradient( rgb(232, 236, 239),rgb(210, 239, 229) ); 
+    width: 100vw;
+    height: 100vh;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width:  350px; /* Maximum width of the form */
+    margin: auto; /* Center the form */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    background: linear-gradient( rgb(250, 250, 250),rgb(186, 204, 235) ); 
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  
+    margin-top: 100px; /* Margin from the top */
+    box-shadow:  none;
+    padding-bottom: 70px;
+}
+
+.form-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color:black;
+    /* font-weight: 1200; */
+    font-size: 2rem;
+     /* Title color */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: black; /* Label color */
+}
+
+.form-group input {
+    width: 98%; 
+   /* Full width input */
+    padding: 10px; /* Padding inside input */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(114, 114, 117, 0.5); /* Semi-transparent background */
+    color: #000; /* Input text color */
+}
+
+.form-group input:focus {
+    border: none; /* No border on focus */
+    outline: none; /* Remove outline */
+    background: rgba(126, 125, 125, 0.7); /* Lighter background on focus */
+}
+
+.form-button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(49, 244, 176, 0.8); /* Semi-transparent blue */
+    color: black; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    backdrop-filter: blur(5px);
+    margin-bottom: 14px; /* Blur effect for button */
+    transition: background 0.3s;
+
+     /* Smooth transition for hover effect */
+}
+
+.form-button:hover {
+    background: rgb(238, 239, 240); /* Darker blue on hover */
+}
+span{
+
+    padding-left:  23px;
+    
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.form-footer {
+    margin-top: 20px; /* Space above the footer */
+    text-align: center; /* Center the footer text */
+}
+
+.footer-link {
+    margin: 5px 0; /* Space between footer links */
+    color:black; /* Text color */
+}
+
+.footer-link a {
+    color: #e4e7ea; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-link a:hover  {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+
+.form-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-container .logo img {
+    width: 65px; /* Adjust the size as needed */
+    
+}

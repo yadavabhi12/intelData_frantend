@@ -1,0 +1,131 @@
+// backand  code 
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const multer = require("multer");
+// const csv = require("csvtojson");
+// const bodyParser = require("body-parser");
+// const cors = require("cors");
+// const fs = require("fs");
+
+// const app = express();
+// const PORT = 5000;
+
+// // Middleware
+// app.use(cors());
+// app.use(bodyParser.json());
+
+
+// mongoose.connect("mongodb://localhost:27017/inteldata")
+
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch((err) => console.log("MongoDB connection error:", err));
+
+
+// // Schema Definitions
+// const memberSchema = new mongoose.Schema({
+//   name: String,
+//   phone: String,
+//   email: String,
+//   location: String,
+//   created: { type: Date, default: Date.now },
+// });
+
+// const listSchema = new mongoose.Schema({
+//   name: String,
+//   type: { type: String, default: "list" },
+//   members: [memberSchema],
+// });
+
+// const List = mongoose.model("List", listSchema);
+
+// // Multer Config for File Uploads
+// const upload = multer({ dest: "uploads/" });
+
+// // Routes
+
+// // Add a New List
+// app.post("/api/lists", async (req, res) => {
+//   try {
+//     const { name } = req.body;
+    
+//     const newList = new List({ name, members: [] });
+    
+//     // Save the list and log the saved object
+//     const t = await newList.save();
+//     console.log(t); // Saved object with MongoDB _id
+    
+//     // Return the saved object in the response
+//     res.status(201).json(t); 
+//   } catch (err) {
+//     console.log("Error adding list:", err);
+//     res.status(500).json({ error: "Error creating list" });
+//   }
+// });
+
+
+// // Get All Lists
+// app.get("/api/lists", async (req, res) => {
+//   try {
+//     const lists = await List.find();
+//     console.log("enter backand list ")
+//     res.json(lists);
+//   } catch (err) {
+//     res.status(500).json({ error: "Error fetching lists" });
+//   }
+// });
+
+// // Get Members of a List
+// app.get("/api/lists/:id", async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const list = await List.findById(id);
+//     if (!list) {
+//       return res.status(404).json({ error: "List not found" });
+//     }
+//     res.json(list.members);
+//   } catch (err) {
+//     res.status(500).json({ error: "Error fetching members" });
+//   }
+// });
+
+// // Delete a List
+// app.delete("/api/lists/:id", async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const deletedList = await List.findByIdAndDelete(id);
+//     if (!deletedList) {
+//       return res.status(404).json({ error: "List not found" });
+//     }
+//     res.json({ success: true });
+//   } catch (err) {
+//     res.status(500).json({ error: "Error deleting list" });
+//   }
+// });
+
+// // Upload CSV File to Add Members
+// app.post("/api/lists/:id/upload", upload.single("file"), async (req, res) => {
+//   const { id } = req.params;
+//   const file = req.file;
+
+//   try {
+//     const jsonArray = await csv().fromFile(file.path);
+//     const updatedList = await List.findByIdAndUpdate(
+//       id,
+//       { $push: { members: { $each: jsonArray } } },
+//       { new: true }
+//     );
+//     fs.unlinkSync(file.path); // Clean up the uploaded file
+//     res.json(updatedList);
+//   } catch (err) {
+//     res.status(500).json({ error: "Error uploading file" });
+//   }
+// });
+
+// // Handle 404 for unmatched routes
+// app.use((req, res) => {
+//   res.status(404).json({ error: "Not Found" });
+// });
+
+// app.listen(PORT, () =>
+//   console.log(`Server running on http://localhost:${PORT}`)
+// );

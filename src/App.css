@@ -1,0 +1,172 @@
+/* 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 2px dashed #1a73e8;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  color: #666;
+  width: 70%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #e1f0ff;
+}
+
+input[type="file"]:focus {
+  outline: none;
+}
+
+/* Container and Field Layout */
+/* div.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+div.field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+div.field > div {
+  flex: 1 1 45%;
+  min-width: 280px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+/* Button Style */
+/* button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #155db8;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+pre {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+} 
+
+
+@media (max-width: 768px) {
+  input[type="file"] {
+    width: 90%;
+  }
+
+  div.field > div {
+    flex: 1 1 100%; 
+  }
+
+  button {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="file"] {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  div.field > div {
+    flex: 1 1 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.a{ 
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  background-color: #b2a0a0;
+  gap: 30px;
+  flex-wrap: wrap;
+  
+} */

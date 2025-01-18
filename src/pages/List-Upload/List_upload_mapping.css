@@ -1,0 +1,182 @@
+/* Container Styles */
+.list_upload_mapping-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* background: linear-gradient(135deg, #f3e7e9, #e3fdfd); */
+    box-sizing: border-box;
+    background: transparent;
+  }
+  
+  .list_upload_mapping-container h2{
+    font-size: max(2rem,3vw);
+  }
+  /* Card Styles */
+  .list_upload_mapping-card {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(188, 232, 229, 0.15);
+    background:linear-gradient(135deg, #dfece8, #d1d6ec);
+    transition: transform 0.3s ease;
+  }
+  
+  .list_upload_mapping-card:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  /* File Input */
+  .list_upload_mapping-card input[type="file"] {
+    margin-bottom: 20px;
+    display: block;
+    width: 92%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #96b9ea;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #fdfdfd;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .list_upload_mapping-card input[type="file"]:focus {
+    border-color: #2b76ed;
+    box-shadow: 0 0 6px rgba(43, 118, 237, 0.4);
+  }
+  
+  .input-cancel-container{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    align-items: self-start;
+    /* background-color: #1d5db8; */
+
+}
+
+/* cenel btn upload  */
+.input-cancel-container .cancel-btn{
+    font-size: 2rem;
+    color: #121212;
+    font-weight:500;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.input-cancel-container .cancel-btn:hover{
+    transform: scale(1.2);
+    color: #f82020;
+
+}
+
+  /* Mapping Section */
+  .list_upload_mapping {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .list_upload_mapping div {
+    display: flex;
+    /* background:linear-gradient(135deg, #0ab380, #d1d6ec); */
+
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .list_upload_mapping label {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .list_upload_mapping select {
+    flex: 2;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #d0ecea, #d7c2ea);
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .list_upload_mapping select:focus {
+    border-color: #2b76ed;
+    background: #fdfdfd;
+  }
+  
+  /* Button Styles */
+  .upload-btn1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    padding: 12px 0px;
+    
+  }
+ .upload-btn1 button {
+ 
+    padding: 12px 30px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    /* background: linear-gradient(135deg, #2b76ed, #1d5db8); */
+  background:linear-gradient(135deg, #076eec, #7db3de);
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+  background:linear-gradient(135deg, #4693eb, #dd1c80);
+    
+    transform: translateY(-2px);
+  }
+  
+  /* Uploaded Data Section */
+  .list_upload_mapping-container pre {
+    width: 600px;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 14px;
+    color: #444;
+    background: linear-gradient(135deg, #f8f8f8, #f2f2f2);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .list_upload_mapping-card {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .list_upload_mapping-container pre {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    button {
+      width: 100%;
+    }
+  }
+  
