@@ -55,6 +55,7 @@ const Login = ({ setIsLoggedIn }) => {
   return (
     <div className="login-main-body">
       <div className="form-container">
+        
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>

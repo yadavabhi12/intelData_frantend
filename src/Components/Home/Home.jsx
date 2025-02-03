@@ -23,12 +23,18 @@ import All_Profile from "../../pages/All-Profile/All_Profile";
 import MovingText from "../MovingText/Moving_Text";
 import List_member_table from "../../pages/List_member_table/List_member_table";
 import Fields from "../Fields/Fields";
-const Home = () => {
+const Home = ({setIsLoggedIn}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleSubMenu = () => setIsSubMenuOpen(!isSubMenuOpen);
+  function logout(){
+    localStorage.setItem("userId",null)
+    console.log("enter logout function ")
+    localStorage.setItem("token",null)
+    setIsLoggedIn(false);
+  }
 
   return (
     <div className="home-containers">
@@ -96,8 +102,8 @@ const Home = () => {
             </li>
           </ul>
           <div className="logout">
-            <NavLink to="/">
-              <span className="icons"><FiLogOut size={18} /></span> <span>LogOut</span>
+            <NavLink to="" onClick={logout} >
+              <span className="icons" ><FiLogOut size={18} /></span> <span>LogOut</span>
             </NavLink>
           </div>
         </div>
@@ -110,7 +116,7 @@ const Home = () => {
           <div className="toggle" onClick={toggleMenu}>
             <FcMenu size={22} />
           </div>
-          {/* <MovingText /> */}
+          <MovingText />
           <div className="profile-pg">
             <img src={user} alt="Profile" />
           </div>
